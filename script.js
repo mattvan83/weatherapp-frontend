@@ -28,10 +28,7 @@ function updateDeleteCityEventListener() {
     document
       .querySelectorAll(".deleteCity")
       [i].addEventListener("click", function () {
-        fetch(
-          `https://weatherapp-backend-gold-delta.vercel.app/weather/${this.id}`,
-          { method: "DELETE" }
-        )
+        fetch(`${urlBackend}/weather/${this.id}`, { method: "DELETE" })
           .then((response) => response.json())
           .then((data) => {
             if (data.result) {
