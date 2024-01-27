@@ -1,4 +1,6 @@
-fetch("https://weatherapp-backend-gold-delta.vercel.app/weather")
+const urlBackend = "https://weatherapp-backend-six-phi.vercel.app";
+
+fetch(`${urlBackend}/weather`)
   .then((response) => response.json())
   .then((data) => {
     if (data.weather) {
@@ -43,7 +45,7 @@ function updateDeleteCityEventListener() {
 document.querySelector("#addCity").addEventListener("click", function () {
   const cityName = document.querySelector("#cityNameInput").value;
 
-  fetch("https://weatherapp-backend-gold-delta.vercel.app/weather", {
+  fetch(`${urlBackend}/weather`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ cityName }),

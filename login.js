@@ -1,4 +1,4 @@
-const urlBackend = "https://weatherapp-backend-gold-delta.vercel.app";
+const urlBackend = "https://weatherapp-backend-six-phi.vercel.app";
 
 document.querySelector("#register").addEventListener("click", function () {
   fetch(`${urlBackend}/users/signup`, {
